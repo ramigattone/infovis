@@ -1,30 +1,180 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-<head>  
-  <meta charset="utf-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
-  <title>TP Letterboxd 2025</title> 
-</head> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Visualizacion de Datos - Mi consumo cinematográfico en 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dashboard personal construido a partir de mis datos de Letterboxd para la materia Visualización de Datos." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-mark" aria-hidden="true">
+        <span class="logo-icon">▶</span>
+      </div>
+      <div class="header-text">
+        <p class="course-tag">Visualización de Datos</p>
+        <h1>Mi consumo cinematográfico en 2025</h1>
+        <p class="header-subtitle">
+          Análisis de mi actividad en Letterboxd a lo largo de 2025: productividad, patrones temporales,
+          géneros preferidos, satisfacción y diversidad geográfica.
+        </p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#grafico-1">Ritmo mensual</a>
+      <a href="#grafico-2">Rating mensual</a>
+      <a href="#grafico-3">Heatmap</a>
+      <a href="#grafico-4">Días</a>
+      <a href="#grafico-5">Géneros</a>
+      <a href="#grafico-6">Productividad vs. satisfacción</a>
+      <a href="#grafico-7">Mapa mundial</a>
+    </nav>
+  </header>
 
-<body>  
+  <main class="page-content">
 
-  <h1>TP Letterboxd 2025</h1>  
+    <!-- 1) Películas vistas por mes en 2025 -->
+    <section id="grafico-1" class="viz-section">
+      <div class="section-header">
+        <p class="section-kicker">01 · Volumen mensual</p>
+        <h2>Películas vistas por mes en 2025</h2>
+        <p class="section-question">¿Cómo varió mi ritmo de visionado a lo largo del año?</p>
+      </div>
+      <div class="viz-frame">
+        <div style="min-height:412px" id="datawrapper-vis-APPuT">
+          <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/APPuT/embed.js" charset="utf-8" data-target="#datawrapper-vis-APPuT"></script>
+          <noscript><img src="https://datawrapper.dwcdn.net/APPuT/full.png" alt="PELÍCULAS VISTAS POR MES EN 2025 (Line chart)" /></noscript>
+        </div>
+      </div>
+    </section>
 
-  <p><strong>¿Cómo varió mi ritmo de visionado y mi nivel de satisfacción a lo largo del año?</strong><br>
-  Este gráfico combina productividad mensual (cantidad de películas) con el promedio de rating, permitiendo observar estacionalidades, picos de actividad y fluctuaciones en la calidad percibida.
-  </p>
+    <!-- 2) Promedio de rating por mes en 2025 -->
+    <section id="grafico-2" class="viz-section">
+      <div class="section-header">
+        <p class="section-kicker">02 · Satisfacción mensual</p>
+        <h2>Promedio de rating por mes en 2025</h2>
+        <p class="section-question">¿En qué meses disfruté más lo que vi?</p>
+      </div>
+      <div class="viz-frame">
+        <div style="min-height:421px" id="datawrapper-vis-NrKxG">
+          <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/NrKxG/embed.js" charset="utf-8" data-target="#datawrapper-vis-NrKxG"></script>
+          <noscript><img src="https://datawrapper.dwcdn.net/NrKxG/full.png" alt="PROMEDIO DE RATING POR MES EN 2025 (Line chart)" /></noscript>
+        </div>
+      </div>
+    </section>
 
-  <div style="min-height:396px" id="datawrapper-vis-chv1P">
-    <script type="text/javascript" defer
-            src="https://datawrapper.dwcdn.net/chv1P/embed.js"
-            charset="utf-8"
-            data-target="#datawrapper-vis-chv1P"></script>
-    <noscript>
-      <img src="https://datawrapper.dwcdn.net/chv1P/full.png"
-           alt="Películas vistas y ratings por mes en 2025 (Line chart)" />
-    </noscript>
-  </div>
+    <!-- 3) Heatmap frecuencia por día y mes -->
+    <section id="grafico-3" class="viz-section">
+      <div class="section-header">
+        <p class="section-kicker">03 · Patrón mensual y semanal</p>
+        <h2>Heatmap de frecuencia de visionado (día x mes)</h2>
+        <p class="section-question">¿Cuándo veo más películas según el mes y el día de la semana?</p>
+      </div>
+      <div class="viz-frame">
+        <div style="min-height:476px" id="datawrapper-vis-amNwd">
+          <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/amNwd/embed.js" charset="utf-8" data-target="#datawrapper-vis-amNwd"></script>
+          <noscript><img src="https://datawrapper.dwcdn.net/amNwd/full.png" alt="HEAT MAP DE FRECUENCIA DE VISIONADO POR DÍA Y POR MES (2025)" /></noscript>
+        </div>
+      </div>
+    </section>
 
-</body> 
+    <!-- 4) Visualización de películas por día -->
+    <section id="grafico-4" class="viz-section">
+      <div class="section-header">
+        <p class="section-kicker">04 · Hábito semanal</p>
+        <h2>Visualización de películas por día</h2>
+        <p class="section-question">¿Qué días de la semana miro más películas?</p>
+      </div>
+      <div class="viz-frame">
+        <div class="flourish-embed flourish-hierarchy" data-src="visualisation/26593546">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript><img src="https://public.flourish.studio/visualisation/26593546/thumbnail" width="100%" alt="Visualización de películas por día" /></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Distribución mensual de géneros vistos en 2025 (Tableau) -->
+    <section id="grafico-5" class="viz-section">
+      <div class="section-header">
+        <p class="section-kicker">05 · Géneros a lo largo del año</p>
+        <h2>Distribución mensual de géneros vistos en 2025</h2>
+        <p class="section-question">¿Qué géneros dominaron cada mes del año?</p>
+      </div>
+      <div class="viz-frame viz-frame--tableau">
+        <div class='tableauPlaceholder' id='viz-distribucion-generos' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Distribución de géneros vistos en 2025' src='https://public.tableau.com/static/images/Di/Distribucionmensualdegenerosvistosen2025/DistribucindeGeneros/1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='Distribucionmensualdegenerosvistosen2025/DistribucindeGeneros' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Di/Distribucionmensualdegenerosvistosen2025/DistribucindeGeneros/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz-distribucion-generos');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width = '100%';
+          vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+    </section>
+
+    <!-- 6) Bubblechart Productividad vs. Satisfacción por género (SVG RAWGraphs) -->
+    <section id="grafico-6" class="viz-section">
+      <div class="section-header">
+        <p class="section-kicker">06 · Productividad vs. satisfacción</p>
+        <h2>Productividad vs. satisfacción por género</h2>
+        <p class="section-question">¿Los géneros que más veo son también los que más disfruto?</p>
+      </div>
+      <div class="viz-frame viz-frame--static">
+        <img src="assets/productividad_vs_satisfaccion_genero.svg"
+             alt="Bubblechart de productividad vs. satisfacción por género"
+             class="static-viz" />
+      </div>
+    </section>
+
+    <!-- 7) Mapa mundi de intensidad por país de origen -->
+    <section id="grafico-7" class="viz-section">
+      <div class="section-header">
+        <p class="section-kicker">07 · Diversidad geográfica</p>
+        <h2>Mapa mundial de países de origen</h2>
+        <p class="section-question">¿De qué países provienen las películas que veo?</p>
+      </div>
+      <div class="viz-frame">
+        <div class="flourish-embed flourish-map" data-src="visualisation/26760734">
+          <script src="https://public.flourish.studio/resources/embed.js"></script>
+          <noscript><img src="https://public.flourish.studio/visualisation/26760734/thumbnail" width="100%" alt="Mapa mundial de origen de las películas" /></noscript>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Visualizacion de Datos - Mi consumo cinematográfico en 2025 · Datos provenientes de Letterboxd</p>
+  </footer>
+</body>
 </html>
-
