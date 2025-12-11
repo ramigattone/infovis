@@ -1,0 +1,211 @@
+/* RESET BÁSICO */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #05070b;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* LAYOUT GENERAL */
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+@media (min-width: 900px) {
+  .page-content {
+    padding: 3rem 1.5rem 5rem;
+  }
+}
+
+/* HEADER */
+.site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(circle at top, #161b26 0, #05070b 55%);
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.logo-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 197, 24, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 20%, #f5c518 0, #f5c518 10%, transparent 55%);
+  box-shadow: 0 0 30px rgba(245, 197, 24, 0.25);
+}
+
+.logo-icon {
+  font-size: 1.4rem;
+  color: #05070b;
+}
+
+.header-text h1 {
+  margin: 0.15rem 0 0.35rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.03em;
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(245, 245, 245, 0.7);
+}
+
+.course-tag {
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.7);
+}
+
+/* NAV */
+.main-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.main-nav a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.8);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(10, 14, 22, 0.8);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: #f5c518;
+  color: #05070b;
+  border-color: #f5c518;
+  transform: translateY(-1px);
+}
+
+/* SECCIONES */
+.viz-section {
+  padding: 2.75rem 0 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.viz-section:last-of-type {
+  border-bottom: none;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+.section-kicker {
+  font-family: "Space Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.6);
+  margin: 0 0 0.4rem;
+}
+
+.section-header h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+}
+
+.section-question {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(245, 245, 245, 0.7);
+}
+
+/* MARCO DE VISUALIZACIONES */
+.viz-frame {
+  position: relative;
+  padding: 0.75rem;
+  border-radius: 18px;
+  background: radial-gradient(circle at top, #131725 0, #05070b 60%);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.viz-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(245, 245, 245, 0.05);
+  pointer-events: none;
+}
+
+/* Asegurar que los embeds ocupen el ancho disponible */
+.viz-frame > div,
+.viz-frame iframe,
+.viz-frame object {
+  width: 100%;
+}
+
+/* Tableau contenedor */
+.viz-frame--tableau {
+  padding: 0.75rem 0.75rem 1rem;
+}
+
+/* SVG estático */
+.viz-frame--static {
+  padding: 1rem;
+}
+
+.static-viz {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(245, 245, 245, 0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .header-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .viz-section {
+    padding: 2.25rem 0 2.25rem;
+  }
+}
